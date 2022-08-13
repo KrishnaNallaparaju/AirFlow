@@ -1,5 +1,4 @@
-# Airflow needs a home. `~/airflow` is the default, but you can put it
-# somewhere else if you prefer (optional)
+#Home page for the airflow configuration
 export AIRFLOW_HOME=~/airflow
 
 # Install Airflow using the constraints file
@@ -12,10 +11,5 @@ CONSTRAINT_URL="https://raw.githubusercontent.com/apache/airflow/constraints-${A
 # For example: https://raw.githubusercontent.com/apache/airflow/constraints-2.3.3/constraints-3.7.txt
 pip3 install "apache-airflow==${AIRFLOW_VERSION}" --constraint "${CONSTRAINT_URL}"
 
-# The Standalone command will initialise the database, make a user,
-# and start all components for you.
+# The Standalone command will initialise the database, make a user and starts all components for you
 airflow standalone
-
-# Visit localhost:8080 in the browser and use the admin account details
-# shown on the terminal to login.
-# Enable the example_bash_operator dag in the home page
